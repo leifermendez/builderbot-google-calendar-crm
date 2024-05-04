@@ -6,3 +6,5 @@ export const provider = createProvider(WaliProvider,{
     token:process.env.CONSOLE_KEY,
     api:'https://wa-api.builderbot.app'
 })
+
+export type Provider = WaliProvider

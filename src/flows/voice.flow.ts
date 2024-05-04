@@ -1,12 +1,12 @@
 import { EVENTS, addKeyword } from "@builderbot/bot";
-import { BaileysProvider } from "@builderbot/provider-baileys";
+import { Provider } from "../provider";
 import AIClass from "src/services/ai";
 import { processAudio } from "src/utils/process";
 import { welcomeFlow } from "./welcome.flow";
 import mainLayer from "src/layers/main.layer";
 import { handleHistory } from "src/utils/handleHistory";
 
-const voiceFlow = addKeyword<BaileysProvider>(EVENTS.VOICE_NOTE)
+const voiceFlow = addKeyword<Provider>(EVENTS.VOICE_NOTE)
     .addAction(async (_, {  flowDynamic }) => {
         await flowDynamic(`dame un momento para esucharte...`)
     })
